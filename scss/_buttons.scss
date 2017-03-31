@@ -1,0 +1,63 @@
+.btn{
+	display: inline-block;
+	vertical-align: top;
+	border: 2px solid transparent;
+	text-align: center;
+	border-radius: $btn-border-radius-base;
+	font-family: $MuseoCyrl;
+	font-weight: 900;
+	font-size: $btn-font-size;
+	line-height: $btn-line-height;
+	min-width: $btn-min-width;
+	padding: 12px 15px;
+	color: $btn-color;
+	text-transform: uppercase;
+	&.dropdown-toggle.focus,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&.focus:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		outline: none;
+	}
+}
+.btn-default{
+	background: $gold;
+	border: 1px solid $gold;
+	&.dropdown-toggle.focus,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&.focus:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		background: $dark-gold;
+		border: 1px solid $dark-gold;
+	}
+}
+.btn-transparent{
+	background: none;
+	border: 1px solid $dark-brown;
+	&.dropdown-toggle.focus,
+	&.active.focus,
+	&.active:focus,
+	&.active:hover,
+	&.focus:active,
+	&:active:focus,
+	&:active:hover,
+	&:focus,
+	&:active,
+	&:hover{
+		background: $dark-brown;
+		color: $white;
+	}
+}

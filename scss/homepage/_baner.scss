@@ -1,0 +1,155 @@
+/* baner */
+.baner{
+	position: relative;
+	overflow: hidden;
+	> .container{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		z-index: 1000;
+		@include breakpoint(mobile){
+			-webkit-transform: none;
+			-ms-transform: none;
+			-o-transform: none;
+			transform: none;
+			left: 0;
+			right: 0;
+		}
+	}
+	.slide-baner{
+		position: relative;
+		.slide-item{
+			width: 100%;
+			position: relative;
+			box-sizing: border-box;
+			vertical-align: top;
+			margin: 0;
+			z-index: 3;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			-webkit-background-size: cover;
+			background-size: cover;
+			outline: none;
+			> img{
+				display: none;
+			}
+			.cell{
+				height: 600px;
+				display: table-cell;
+				vertical-align: bottom;
+				width: 1%;
+				@include breakpoint(mobile){
+					height: 450px;
+				}
+			}
+			.slide-descr{
+				padding: 140px 0 100px 65px;
+				font-family: $MuseoCyrl;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 24px;
+				@include breakpoint(tablet){
+					padding: 95px 10px 85px;
+					text-shadow: 1px 1px 1px rgba(255,255,255,.7);
+				}
+				@include breakpoint(mobile){
+					font-size: 14px;
+					padding: 95px 30px 50px;
+				}
+				h1{
+					@include breakpoint(mobile){
+						font-size: 32px;
+						margin-bottom: 15px;
+					}
+				}
+				small{
+					display: block;
+					font-size: 40px;
+					font-family: $MuseoCyrl;
+					font-weight: 500;
+					color: $dark-brown;
+					text-transform: none;
+					@include breakpoint(mobile){
+						font-size: 24px;
+					}
+				}
+				p{
+					margin-bottom: 40px;
+					@include breakpoint(tablet){
+						font-weight: 500;
+					}
+					@include breakpoint(mobile){
+						margin-bottom: 20px;
+					}
+				}
+				.btn-default{
+					padding: 14px 17px;
+					@include breakpoint(mobile){
+						width: 100%;
+						min-width: auto;
+					}
+				}
+			}
+		}
+	}
+}
+.slick-arrow{
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 33px;
+	height: 65px;
+	padding: 0;
+	margin-top: 35px;
+	cursor: pointer;
+	color: transparent;
+	border: none;
+	outline: none;
+	background: transparent;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	opacity: 1;
+	-webkit-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	transition: opacity .3s;
+	z-index: 1000;
+	font-size: 0;
+	line-height: 0;
+	&:hover{
+		opacity: $hover-opacity;
+	}
+}
+.slick-prev {
+	background: url(#{$images}ico-arrow-prev.svg) no-repeat;
+	-webkit-background-size: 33px auto;
+	background-size: 33px auto;
+	left: 10px;
+	@include breakpoint(tablet){
+		-webkit-background-size: 23px auto;
+		background-size: 23px auto;
+		left: -4px;
+	}
+	@include breakpoint(mobile){
+		background-position: 50% 50%;
+		left: 5px;
+	}
+}
+.slick-next {
+	background: url(#{$images}ico-arrow-next.svg) no-repeat;
+	-webkit-background-size: 33px auto;
+	background-size: 33px auto;
+	right: 10px;
+	@include breakpoint(tablet){
+		-webkit-background-size: 23px auto;
+		background-size: 23px auto;
+		right: -4px;
+	}
+	@include breakpoint(mobile){
+		background-position: 50% 50%;
+		right: 5px;
+	}
+}

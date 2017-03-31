@@ -1,0 +1,47 @@
+/* works */
+.works{
+	text-align: center;
+	padding: 56px 0 62px;
+	background: $white;
+	font-family: $MuseoCyrl;
+	font-weight: 700;
+	font-size: 15px;
+	@include breakpoint(mobile){
+		font-size: 14px;
+		padding: 20px 0 30px;
+	}
+	.row{
+		margin-bottom: 38px;
+		@include breakpoint(mobile){
+			margin-bottom: 15px;
+		}
+	}
+	a{
+		color: $dark-brown;
+		&:hover .img{
+			border: 1px solid $gold;
+		}
+		&:hover span{
+			text-decoration: underline;
+		}
+	}
+	.work-item{
+		margin: 16px 0 10px;
+		.img{
+			padding: 8px;
+			border: 1px solid $gray-simple-01;
+			margin-bottom: 12px;
+			background: $white;
+			@include breakpoint(mobile){
+				padding: 4px;
+			}
+			img{
+				display: block;
+				width: 100%;
+			}
+		}
+		span{
+			color: $dark-brown;
+		}
+	}
+}

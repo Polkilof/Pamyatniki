@@ -1,0 +1,62 @@
+/* quotes */
+.quotes{
+	background: url(#{$images}img-bg-quotes.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	padding: 76px 0 60px;
+	@include breakpoint(tablet){
+		padding: 58px 0 40px;
+	}
+	@include breakpoint(mobile){
+		padding: 38px 0 20px;
+	}
+	blockquote{
+		position: relative;
+		box-sizing: border-box;
+		display: block;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	q{
+		display: block;
+		padding: 0 35px 27px 108px;
+		font-family: $MuseoCyrl;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 36px;
+		font-style: italic;
+		@include breakpoint(mobile){
+			padding: 0 10px 10px 53px;
+			font-size: 18px;
+			line-height: 24px;
+		}
+		&:before{
+			content: "\0022";
+			font-size: 90px;
+			line-height: 1;
+			font-family: $MuseoCyrl;
+			font-weight: 100;
+			font-style: italic;
+			color: $dark-brown-04;
+			position: absolute;
+			top: -5px;
+			left: 35px;
+			@include breakpoint(mobile){
+				font-size: 65px;
+				top: -3px;
+				left: 10px;
+			}
+		}
+	}
+	cite{
+		font-family: $MuseoCyrl;
+		font-weight: 100;
+		font-size: 18px;
+		font-style: normal;
+		text-align: right;
+		display: block;
+		@include breakpoint(mobile){
+			font-size: 16px;
+		}
+	}
+}

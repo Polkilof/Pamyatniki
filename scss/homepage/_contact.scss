@@ -1,0 +1,225 @@
+/* contact */
+.contact{
+	overflow: hidden;
+	.heading{
+		text-align: left;
+	}
+	h3{
+		margin: 58px 0 25px;
+		@include breakpoint(mobile){
+			margin: 25px 0 15px;
+		}
+	}
+	.contact-details{
+		.row{
+			margin: 0;
+		}
+		ul{
+			padding: 0;
+			margin: 0 0 15px;
+			list-style: none;
+			border-bottom: 1px solid $gold-light-02;
+			@include clearfix();
+			li{
+				padding: 48px 10px 52px 0;
+				font-family: $MuseoCyrl;
+				font-weight: 100;
+				font-size: 16px;
+				line-height: 20px;
+				color: $dark-brown;
+				border-top: 1px solid $gold-light-02;
+				@include breakpoint(tablet){
+					padding: 25px 0px 25px 0;
+				}
+				@include breakpoint(mobile){
+					padding: 8px 0px 8px 0;
+					font-size: 14px;
+					line-height: 18px;
+				}
+			}
+			address{
+				overflow: hidden;
+				display: block;
+				margin: 0;
+			}
+			.cell{
+				display: table-cell;
+				vertical-align: middle;
+				width: 1%;
+				height: 60px;
+			}
+			.holder{overflow: hidden;}
+			.ico{
+				float: left;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				background: $dark-brown;
+				position: relative;
+				margin: 0 20px 0 0;
+				img{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-webkit-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					-o-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+			.tel{
+				font-family: $MuseoCyrl;
+				font-weight: 700;
+				font-size: 22px;
+				line-height: 28px;
+				display: inline-block;
+				vertical-align: top;
+				@include breakpoint(mobile){
+					font-size: 18px;
+					line-height: 22px;
+				}
+				span{
+					color: $dark-brown;
+				}
+			}
+			.mail{
+				display: inline-block;
+				vertical-align: top;
+				span{
+					color: $dark-brown;
+				}
+			}
+			a{
+				color: $grey-gold-02;
+			}
+		}
+	}
+	.contact-form{
+		position: relative;
+		background: $dark-brown-02;
+		color: $white;
+		font-family: $MuseoCyrl;
+		font-weight: 100;
+		font-size: 15px;
+		text-align: center;
+		padding: 0 40px 58px;
+		@include clearfix();
+		&:after{
+			content: "";
+			position: absolute;
+			top: 100%;
+			bottom: -9999px;
+			left: 0;
+			right: 0;
+			background: $dark-brown-02;
+			z-index: -9999;
+			display: block;
+			@include breakpoint(mobile){
+				left: - $grid-gutter-width-mobile;
+				right: - $grid-gutter-width-mobile;
+				top: 0;
+			}
+		}
+		@include breakpoint(mobile){
+			padding: 0 20px 25px;
+		}
+		h3{
+			position: relative;
+			color: $white;
+			&:after{
+				content: "";
+				position: absolute;
+				bottom: -25px;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+				-o-transform: translateX(-50%);
+				transform: translateX(-50%);
+				background: rgba(255,255,255,.2);
+				width: 138px;
+				height: 1px;
+				@include breakpoint(mobile){
+					bottom: -15px;
+				}
+			}
+		}
+		.input-holder{
+			position: relative;
+			width: 100%;
+			& + .input-holder{
+				margin-top: 21px;
+			}
+			&:before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: 3px solid transparent;
+				border-left: 3px solid $white;
+				border-top: 3px solid $white;
+			}
+			.ico{
+				font-size: 0;
+				width: 40px;
+				padding: 0;
+				background-color: transparent;
+				border: 0;
+				border-bottom: 2px solid $white;
+				height: 38px;
+				border-radius: 0;
+				img{
+					max-width: 100%;
+					vertical-align: middle;
+				}
+			}
+		}
+		.form-control{
+			height: 40px;
+			font-family: $MuseoCyrl;
+			font-weight: 100;
+			font-size: 15px;
+			line-height: 20px;
+			color: $white;
+			border: 0;
+			background-color: transparent;
+			border-bottom: 2px solid $white;
+			margin: 0;
+			padding: 6px 12px 6px 2px;
+		}
+		.form-control::-moz-placeholder{
+			color: $grey-gold;
+			opacity: 1;
+		}
+		.form-control:-ms-input-placeholder{color: $grey-gold;}
+		.form-control::-webkit-input-placeholder{color: $grey-gold;}
+		.btn-default{
+			margin-top: 40px;
+			padding: 14px 15px;
+			width: 100%;
+			@include breakpoint(mobile){
+				width: 100%;
+				min-width: auto;
+				margin-top: 25px;
+			}
+		}
+		p{
+			line-height: 1.4;
+			margin: 0;
+			padding: 23px 5px 32px;
+			@include breakpoint(mobile){
+				padding: 18px 0 28px3
+			}
+		}
+	}
+	.map{
+		height: 580px;
+		@include breakpoint(tablet){
+			height: 380px;
+		}
+		@include breakpoint(mobile){
+			height: 280px;
+		}
+	}
+}

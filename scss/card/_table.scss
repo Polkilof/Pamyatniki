@@ -1,0 +1,58 @@
+/*table*/
+.table{
+	margin: 0;
+	table{
+		position: relative;
+		width: 100%;
+		margin-bottom: 28px;
+		@include breakpoint(mobile){
+			margin-bottom: 18px;
+		}
+		tr{
+			position: relative;
+			&:first-child:after{
+				content: "";
+				position: absolute;
+				top: 19px;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 3px;
+				background: $dark-brown-01;
+			}
+		}
+		th{
+			font-family: $MuseoCyrl;
+			font-size: 14px;
+			font-weight: 700;
+			color: $dark-brown;
+			text-transform: uppercase;
+			padding-bottom: 16px;
+			@include breakpoint(mobile){
+				font-size: 12px;
+			}
+			&:first-child{
+				padding-left: 41px;
+			}
+		}
+		td{
+			font-family: $MuseoCyrl;
+			font-size: 13px;
+			font-weight: 300;
+			color: $dark-brown;
+			border-bottom: 1px solid $gray-simple-01;
+			padding: 10px 0 9px;
+			width: 39.2%;
+			+ td{
+				width: 30%;
+			}
+			@include breakpoint(mobile){
+				font-size: 12px;
+				padding: 8px 0;
+			}
+			strong{
+				font-weight: 900;
+			}
+		}
+	}
+}

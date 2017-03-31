@@ -1,0 +1,170 @@
+@import "_vars";
+@import "_fonts";
+@import "_mixins";
+@import "_bootstrap";
+@import "_slick.scss";
+
+
+body{
+	color: $base-color;
+	min-width: 320px;
+	font-weight: 100;
+}
+img{border-style: none;}
+input,
+textarea,
+select{
+	color: $gray-base;
+	vertical-align: middle;
+	font: 100% $font-family-base;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: none;
+	cursor: pointer;
+	@include transition(all ease $time-animation);
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner{
+	border: none;
+	padding: 0;
+}
+form,fieldset{
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+blockquote,
+q{quotes: none;}
+q:before,
+q:after {content: '';}
+
+::-moz-placeholder,
+:-moz-placeholder{opacity: 1;}
+::-moz-placeholder{color: $gray-base;}
+:-ms-input-placeholder{color: $gray-base;}
+::-webkit-input-placeholder{color: $gray-base;}
+a{
+	text-decoration: none;
+	@include transition(all ease $time-animation);
+}
+a:hover,
+a:focus{
+	text-decoration: none;
+}
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus{outline: none;}
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+#wrapper{
+	position: relative;
+	max-width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	@include breakpoint(tablet) {
+		-webkit-transition: margin .3s;
+		-o-transition: margin .3s;
+		transition: margin .3s;
+		overflow: visible;
+	}
+}
+.container{
+	@include breakpoint(mobile) {
+		padding-left: $grid-gutter-width-mobile;
+		padding-right: $grid-gutter-width-mobile;
+	}
+}
+/*typography*/
+h1{
+	font-family: $MuseoCyrl;
+	font-weight: 900;
+	font-size: $font-size-h1;
+	color: $dark-brown;
+	text-transform: uppercase;
+	margin: 0 0 30px;
+}
+h2{
+	font-family: $MuseoCyrl;
+	font-weight: 900;
+	font-size: $font-size-h2;
+	color: $dark-brown;
+	text-transform: uppercase;
+	margin: 0 0 28px;
+	@include breakpoint(tablet){
+		font-size: 24px;
+		margin: 0 0 20px;
+	}
+	@include breakpoint(mobile){
+		font-size: 20px;
+	}
+}
+h3{
+	font-family: $MuseoCyrl;
+	font-weight: 900;
+	font-size: $font-size-h3;
+	color: $dark-brown;
+	margin: 0 0 32px;
+	text-transform: uppercase;
+	@include breakpoint(tablet){
+		font-size: 22px;
+		line-height: 26px;
+	}
+	@include breakpoint(mobile){
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+h4{
+	font-family: $MuseoCyrl;
+	font-weight: 900;
+	font-size: $font-size-h4;
+	color: $dark-brown;
+	margin: 0 0 14px;
+	text-transform: uppercase;
+	@include breakpoint(mobile){
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+p{margin: $paragraph-spacing;}
+/*end typography*/
+
+
+@import "_buttons";
+@import "_components";
+@import "layout/_header";
+@import "layout/_main_nav";
+@import "layout/_footer";
+
+/* homepage */
+@import "homepage/_baner";
+@import "homepage/_about";
+@import "homepage/_infographic";
+@import "homepage/_milestones";
+@import "homepage/_slick-dots";
+@import "homepage/_quotes";
+@import "homepage/_works";
+@import "homepage/_contact";
+
+/* catalog */
+@import "catalog/_catalog-area";
+
+/* card */
+@import "card/_card";
+@import "card/_select";
+@import "card/_table";
+@import "card/_sidebar";
+
+/* services */
+@import "services/_product-block";
+
+/*exclusive*/
+@import "exclusive/_exclusive-block";

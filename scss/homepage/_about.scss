@@ -1,0 +1,23 @@
+/* about */
+.about{
+	background: $white;
+	padding: 55px 0 40px;
+	font-family: $MuseoCyrl;
+	font-weight: 100;
+	font-size: 15px;
+	line-height: 1.5;
+	color: $dark-brown;
+	@include breakpoint(tablet){
+		padding: 35px 0 20px;
+	}
+	@include breakpoint(mobile){
+		font-size: 14px;
+		line-height: 1.25;
+	}
+	p{
+		margin-bottom: 28px;
+		@include breakpoint(tablet){
+			margin-bottom: 18px;
+		}
+	}
+}

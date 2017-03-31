@@ -1,0 +1,97 @@
+/* main-nav */
+#main-nav{
+	padding: 7px 0 0;
+	margin: 0 -24px 0 0;
+	@include breakpoint(desktop-md) {
+		margin-right: -11px;
+	}
+	@include breakpoint(tablet) {
+		position: fixed;
+		top: 0;
+		right: -280px;
+		bottom: 0;
+		width: 280px;
+		padding: 0;
+		margin: 0;
+		z-index: 200;
+		background: rgba(33, 23, 16, 0.97);
+		-webkit-transition: right .3s;
+		-o-transition: right .3s;
+		transition: right .3s;
+		overflow-y: auto;
+	}
+	.info-nav{
+		display: none;
+		a{
+			color: #e4c66e;
+			padding: 0;
+			display: inline-block;
+			vertical-align: top;
+			background: none;
+			&:hover{background: none;}
+		}
+		@include breakpoint(tablet) {
+			display: block !important;
+			padding-bottom: 10px;
+		}
+		li{
+			float: none;
+			width: 100%;
+			padding: 10px;
+			border-bottom: none;
+			font-size: 15px;
+			+ li{
+				border-top: 1px solid rgba(255,255,255, .1);
+			}
+		}
+	}
+	ul{
+		@include clearfix();
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		width: 100%;
+		display: table;
+		@include breakpoint(tablet) {
+			display: block;
+			margin-bottom: 10px;
+		}
+		li{
+			display: table-cell;
+			vertical-align: top;
+			@include breakpoint(desktop-md) {
+				font-size: 14px;
+			}
+			@include breakpoint(tablet) {
+				display: block;
+				width: auto;
+				font-size: 17px;
+				border-bottom: 1px solid rgba(255,255,255, .1);
+			}
+			&.active > a{
+				background: $dark-brown-03;
+			}
+			a{
+				display: block;
+				color: $white;
+				padding: 9px 10px;
+				border-radius: 25px;
+				text-align: center;
+				-webkit-transition: background .3s;
+				-o-transition: background .3s;
+				transition: background .3s;
+				@include breakpoint(desktop-md) {
+					padding: 9px 10px;
+				}
+				@include breakpoint(tablet) {
+					border-radius: 0;
+					text-align: left;
+					padding: 10px 20px;
+				}
+				&:hover{
+					background: $dark-brown-03;
+				}
+			}
+		}
+	}
+}

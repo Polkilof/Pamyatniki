@@ -1,0 +1,200 @@
+/*sidebar*/
+.sidebar{
+	background: $gray-simple;
+	.block{
+		padding: 10px 22px 5px;
+		@include breakpoint(mobile){
+			padding: 8px 18px 10px;
+		}
+		table{
+			margin-bottom: 0;
+			tr:first-child:after{
+				display: none;
+			}
+		}
+		.style2{
+			td{
+				padding: 10px 0;
+				width: 71%;
+				+ td{
+					width: auto;
+					+td{
+						width: auto;
+					}
+				}
+			}
+		}
+		td{
+			width: 40%;
+			border-bottom: 0;
+			padding: 12px 0;
+			+ td{
+				width: 19%;
+				+td{
+					width: 24%;
+				}
+			}
+		}
+		tbody tr:last-child {
+			border-bottom: 1px solid $gray-simple-01;
+		}
+		.sum{
+			td{
+				padding: 17px 0;
+			}
+			b{
+				font-weight: 900;
+				text-transform: uppercase;
+			}
+			strong{
+				font-size: 16px;
+				line-height: 20px;
+				@include breakpoint(mobile){
+					font-size: 14px;
+					line-height: 18px;
+				}
+			}
+		}
+		.size{
+			text-transform: lowercase;
+		}
+		.radio label{
+			padding-left: 31px;
+		}
+		.sale{
+			padding: 6px 0 0;
+			strong{
+				color: $grey-gold-02;
+			}
+			td{
+				width: 46%;
+				border-bottom: 0;
+				padding: 7px 0;
+				+ td{
+					width: 19%;
+					+td{
+						width: 24%;
+					}
+				}
+			}
+		}
+		.sum-sale{
+			border-top: 1px solid $gray-simple-01;
+			border-bottom: 1px solid $gray-simple-01;
+			td{
+				padding: 12px 0;
+			}
+		}
+		> strong{
+			font-size: 13px;
+			line-height: 18px;
+			font-weight: 900;
+			color: $dark-brown;
+			display: block;
+			margin-bottom: 27px;
+			text-transform: uppercase;
+			@include breakpoint(mobile){
+				font-size: 12px;
+				line-height: 16px;
+			}
+			span{
+				font-size: 24px;
+				line-height: 24px;
+				font-weight: 900;
+				text-transform: none;
+				margin: 0 10px 0 11px;
+				@include breakpoint(mobile){
+					font-size: 20px;
+					line-height: 20px;
+				}
+			}
+		}
+		.btn{
+			margin-bottom: 10px;
+			padding: 14px 15px;
+			@include breakpoint(mobile){
+				display: block;
+			}
+		}
+	}
+	.btn-list{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0;
+		line-height: 0;
+		li{
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 10px;
+			@include breakpoint(mobile){
+				display: block;
+				padding: 0 0 15px;
+			}
+		}
+	}
+	.heading{
+		text-align: left;
+		padding: 18px 22px 14px;
+		background: $dark-brown-01;
+		@include breakpoint(mobile){
+			padding: 14px 18px 10px;
+		}
+		h4{
+			margin-bottom: 0;
+			color: $white;
+		}
+	}
+	.title{
+		background: $gray-light-05;
+		padding: 18px 22px 14px;
+		@include breakpoint(mobile){
+			padding: 14px 18px 10px;
+		}
+		h4{
+			margin-bottom: 0;
+			color: $dark-brown-01;
+		}
+	}
+	.characteristic{
+		background: $white;
+		padding: 27px 0;
+		@include breakpoint(mobile){
+			padding: 18px 0;
+		}
+		h4{
+			margin-bottom: 18px;
+			font-size: 16px;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li{
+				position: relative;
+				padding-left: 22px;
+				font-size: 15px;
+				line-height: 20px;
+				font-weight: 300;
+				color: $grey-01;
+				@include breakpoint(mobile){
+					font-size: 14px;
+					line-height: 18px;
+				}
+				&:before{
+					content: "";
+					position: absolute;
+					top: 7px;
+					left: 4px;
+					width: 6px;
+					height: 6px;
+					background: $gold;
+					border-radius: 50%;
+				}
+				& + li{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,69 @@
+.grid-area {
+	background: $white;
+	padding: 0 0 19px;
+	@include breakpoint(mobile) {
+		padding-bottom: 0;
+	}
+	.container >.row{
+		font-size: 0;
+		line-height: 0;
+		> div{
+			display: inline-block;
+			vertical-align: top;
+			float: none;
+			@include breakpoint(mobile) {
+				display: block;
+			}
+		}
+	}
+}
+.product-block{
+	display: block;
+	text-align: center;
+	margin-bottom: 28px;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $dark-brown;
+	font-weight: 700;
+	@include breakpoint(tablet) {
+		margin-bottom: 20px;
+	}
+	&:hover .img:before{
+		border: 2px solid $gold-light;
+	}
+	.img{
+		display: block;
+		position: relative;
+		height: 240px;
+		line-height: 220px;
+		font-size: 0;
+		padding: 10px;
+		margin: 0 0 16px;
+		@include breakpoint(mobile) {
+			height: 140px;
+			line-height: 120px;
+			margin-bottom: 10px;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			border: 1px solid $gray-simple-01;
+		}
+		img{
+			vertical-align: middle;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	p{
+		margin: 0 5px;
+		min-height: 38px;
+		@include breakpoint(mobile) {
+			min-height: 0;
+		}
+	}
+}

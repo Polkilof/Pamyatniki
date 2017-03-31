@@ -1,0 +1,111 @@
+/* infographic */
+.infographic{
+	background: url(#{$images}img-bg-infographic.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	padding: 50px 0 0;
+	font-family: $MuseoCyrl;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 1.5;
+	color: $blue-simple;
+	@include breakpoint(tablet){
+		padding: 30px 0;
+	}
+	@include breakpoint(mobile){
+		font-size: 12px;
+		line-height: 1.25;
+		padding: 25px 0 20px;
+	}
+	.infographic-item{
+		position: relative;
+		min-height: 260px;
+		text-align: center;
+		padding: 10px 30px;
+		@include breakpoint(tablet){
+			margin-bottom: 10px;
+			min-height: 260px;
+			padding: 50px 10px 20px;
+		}
+		@include breakpoint(mobile){
+			min-height: 210px;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+			width: 20px;
+			height: 95px;
+			background: url(#{$images}ico-infographic-04.png) 50% 50% no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+			@include breakpoint(tablet){
+				top: -38px;
+				left: 50%;
+				bottom: 0;
+				-webkit-transform: translateY(-50%) rotate(90deg);
+				-ms-transform: translateY(-50%) rotate(90deg);
+				-o-transform: translateY(-50%) rotate(90deg);
+				transform: translateX(-50%) rotate(90deg);
+			}
+		}
+		strong{
+			display: block;
+			font-family: $MuseoCyrl;
+			font-weight: 900;
+			font-size: 18px;
+			color: $white;
+			padding: 20px 0 5px;
+			text-transform: uppercase;
+			@include breakpoint(mobile){
+				font-size: 16px;
+				line-height: 1.25;
+			}
+		}
+		p{
+			margin-bottom: 0;
+		}
+	}
+	.row div:nth-child(3n+3) .infographic-item,
+	.row div:last-child .infographic-item{
+		&:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+			width: 20px;
+			height: 95px;
+			background: url(#{$images}ico-infographic-04.png) 50% 50% no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+	}
+	.row div:last-child .infographic-item{
+		&:after{
+			@include breakpoint(tablet){
+				content: "";
+				position: absolute;
+				top: initial;
+				left: 50%;
+				bottom: -50px;
+				-webkit-transform: translateY(-50%) rotate(90deg);
+				-ms-transform: translateY(-50%) rotate(90deg);
+				-o-transform: translateY(-50%) rotate(90deg);
+				transform: translateX(-50%) rotate(90deg);
+				width: 20px;
+				height: 95px;
+				background: url(#{$images}ico-infographic-04.png) 50% 50% no-repeat;
+				-webkit-background-size: cover;
+				background-size: cover;
+			}
+		}
+	}
+}

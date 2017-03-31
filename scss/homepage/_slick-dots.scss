@@ -1,0 +1,42 @@
+/* slick-dots */
+.slick-dotted .slick-slider{
+	margin: 0;
+}
+.slick-dots{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 10;
+	li{
+		display: inline-block;
+		vertical-align: top;
+		button{
+			position: relative;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			border: 0;
+			background: $gold-light-01;
+			padding: 0;
+			margin: 0 6px;
+			outline: none;
+			transition: $time-animation;
+			&:hover{
+				background: $dark-gold;
+			}
+		}
+		&.slick-active button{
+			background: $dark-gold;
+			&:hover{
+				background: $gold;
+			}
+		}
+	}
+}

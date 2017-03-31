@@ -1,0 +1,382 @@
+/*heading*/
+.heading{
+	text-align: center;
+	h2{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 138px;
+		@include breakpoint(mobile){
+			padding: 0 68px;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			top: 35%;
+			transform: translateY(-65%);
+			left: 0px;
+			width: 108px;
+			height: 31px;
+			background: url(#{$images}iconset-pattern.png) 50% 50% no-repeat;
+			background-position: 0 0;
+			@include breakpoint(mobile){
+				top: 40%;
+				transform: translateY(-60%);
+				width: 62px;
+				height: 18px;
+				background-position: 0 0;
+				background-size: cover;
+			}
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			top: 35%;
+			transform: translateY(-65%);
+			right: 0px;
+			width: 108px;
+			height: 31px;
+			background: url(#{$images}iconset-pattern.png) 50% 50% no-repeat;
+			background-position: -108px 0;
+			@include breakpoint(mobile){
+				top: 40%;
+				transform: translateY(-60%);
+				width: 62px;
+				height: 18px;
+				background-position: -62px 0;
+				background-size: cover;
+			}
+		}
+	}
+	h3{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 106px 0 0;
+		&:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0px;
+			width: 89px;
+			height: 30px;
+			background: url(#{$images}ico-pattern02.png) 50% 50% no-repeat;
+			-webkit-background-size: cover;
+			background-size: cover;
+			@include breakpoint(mobile){
+				width: 70px;
+				height: 23px;
+			}
+		}
+		@include breakpoint(mobile){
+			margin-bottom: 25px;
+			padding: 0 85px 0 0;
+		}
+	}
+	span{
+		color: $dark-gold;
+	}
+}
+/*and heading*/
+
+/*form-control*/
+.form-control{
+	display: block;
+	width: 100%;
+	height: 38px;
+	font-family: $MuseoCyrl;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 18px;
+	color: $dark-brown;
+	background-color: $white;
+	border: 1px solid $blue-simple-01;
+	padding: 6px 14px;
+	overflow: hidden;
+	border-radius: 0;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	margin-bottom: 10px;
+	&:focus{
+		outline: none;
+		box-shadow: none;
+		border-color: transparent;
+	}
+}
+textarea.form-control{
+	max-height: 230px;
+	resize: none;
+	overflow: auto;
+}
+.form-control::-moz-placeholder {
+	color: $grey-gold;
+	opacity: 1;
+}
+.form-control:-ms-input-placeholder {color: $grey-gold;}
+.form-control::-webkit-input-placeholder {color: $grey-gold;}
+/*end form-control*/
+
+/*breadcrumb*/
+.breadcrumb{
+	margin: 0;
+	padding: 0;
+	ul{
+		margin: 0;
+		padding: 14px 0;
+		list-style: none;
+		@include clearfix();
+		li{
+			font-size: 15px;
+			line-height: 20px;
+			float: left;
+			color: $breadcrumb-active-color;
+			@include breakpoint(mobile) {
+				font-size: 12px;
+			}
+			+ li:before{
+				content: $breadcrumb-separator;
+				color: $breadcrumb-color;
+				margin: 0 12px;
+				@include breakpoint(mobile) {
+					margin: 0 6px 0 7px;
+					position: relative;
+					top: 1px;
+				}
+			}
+			a{
+				text-decoration: underline;
+				color: $breadcrumb-color;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+/*end breadcrumb*/
+
+/*page-header*/
+.page-header{
+	overflow: hidden;
+	position: relative;
+	padding: 27px 125px 23px 0;
+	margin: 0;
+	border: none;
+	@include breakpoint(mobile) {
+		padding: 14px 68px 13px 0;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		top: 24px;
+		right: 0;
+		background: url(#{$images}iconset-pattern.png) -108px 0 no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 108px;
+		height: 31px;
+		@include breakpoint(mobile) {
+			width: 62px;
+			height: 18px;
+			background-position: -62px 0;
+			top: 14px;
+		}
+	}
+	.overflow{
+		overflow: hidden;
+	}
+	h2{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+		position: relative;
+		@include breakpoint(mobile) {
+			font-size: 18px;
+			line-height: 24px;
+		}
+		&:before{
+			content: '';
+			position: absolute;
+			left: 100%;
+			top: 17px;
+			right: -99999px;
+			height: 2px;
+			background: $gold-02;
+			margin: 0 0 0 21px;
+			@include breakpoint(tablet) {
+				top: 12px;
+			}
+			@include breakpoint(mobile) {
+				top: 9px;
+			}
+		}
+	}
+}
+/*end page-header*/
+
+/*pagination-holder*/
+.pagination-holder{
+	text-align: center;
+	font-size: 0;
+	line-height: 0;
+	.pagination{
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+.pagination{
+	margin: 0;
+	padding: 10px 0 4px;
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+	@include breakpoint(tablet) {
+		padding-top: 20px;
+	}
+	@include breakpoint(mobile) {
+		margin: 0 -3px;
+		padding: 10px 0 6px;
+	}
+	li{
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+		padding: 0 3px 6px;
+		@include breakpoint(mobile) {
+			font-size: 14px;
+			line-height: 18px;
+			padding: 0 2px 4px;
+		}
+		a{
+			min-width: 40px;
+			padding: 9px 5px;
+			float: none;
+			display: block;
+			border-radius: 0;
+			@include breakpoint(mobile) {
+				min-width: 30px;
+				padding: 5px;
+			}
+		}
+		span{
+			border: none;
+			background: none;
+			padding: 11px 10px 6px;
+			&:hover{background: none;}
+			@include breakpoint(mobile) {
+				padding: 7px 2px 5px;
+			}
+		}
+	}
+	li:last-child > a,
+	li:last-child > span,
+	li:first-child > a,
+	li:first-child > span{
+		border-radius: 0;
+	}
+	.arrow{
+		font-size: 0;
+		line-height: 0;
+		border-radius: 0;
+		width: 40px;
+		height: 40px;
+		@include breakpoint(mobile) {
+			width: 30px;
+			height: 30px;
+		}
+	}
+	.prev{
+		background: url(#{$images}ico-double-arrow-left.svg) no-repeat 50% 50%;
+		-webkit-background-size: 12px auto;
+		background-size: 12px auto;
+		margin-right: 26px;
+		@include breakpoint(mobile) {
+			-webkit-background-size: 8px auto;
+			background-size: 8px auto;
+			margin: 0;
+		}
+	}
+	.next{
+		background: url(#{$images}ico-double-arrow-right.svg) no-repeat 50% 50%;
+		-webkit-background-size: 12px auto;
+		background-size: 12px auto;
+		margin-left: 26px;
+		@include breakpoint(mobile) {
+			-webkit-background-size: 8px auto;
+			background-size: 8px auto;
+			margin: 0;
+		}
+	}
+}
+/*radio*/
+.radio{
+	line-height: 20px;
+	margin: 0;
+	display: inline-block;
+	vertical-align: top;
+	[type=radio]{
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+	label{
+		position: relative;
+		padding-left: 43px;
+		vertical-align: top;
+		cursor: pointer;
+		margin: 0;
+		font-weight: inherit;
+	}
+	[type=radio]:not(:checked) ~ .control-indicator,
+	[type=radio]:checked ~ .control-indicator{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 20px;
+		height: 20px;
+		border: 1px solid $gray-simple-01;
+		background: $white;
+		border-radius: 50%;
+	}
+	[type=radio]:checked ~ .control-indicator{
+		background: $white;
+	}
+	[type=radio]:not(:checked) ~ .control-indicator:after,
+	[type=radio]:checked ~ .control-indicator:after{
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		width: 8px;
+		height: 8px;
+		background-color: $dark-brown-01;
+		border-radius: 50%;
+		transition: all .2s;
+	}
+	[type=radio]:not(:checked) ~ .control-indicator:after{
+		opacity: 0;
+		transform: scale(0);
+	}
+	[type=radio]:checked ~ .control-indicator:after{
+		opacity: 1;
+		transform: scale(1);
+	}
+	[type=radio]:disabled:not(:checked) ~ .control-indicator,
+	[type=radio]:disabled:checked ~ .control-indicator,
+	[type=radio]:not(:checked) ~ .control-indicator{
+		box-shadow: none;
+		border-color: $gray-simple-01;
+		background-color: $white;
+	}
+}

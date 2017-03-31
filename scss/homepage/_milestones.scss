@@ -1,0 +1,129 @@
+/* milestones */
+.milestones{
+	font-family: $MuseoCyrl;
+	font-weight: 100;
+	font-size: 15px;
+	line-height: 1.5;
+	color: $dark-brown;
+	@include breakpoint(tablet){
+		overflow: hidden;
+	}
+	@include breakpoint(mobile){
+		font-size: 14px;
+		line-height: 1.25;
+	}
+	.milestones-list{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		counter-reset: list;
+		&>li{
+			padding: 58px 0 38px;
+			position: relative;
+			&:nth-child(2n){
+				&:before{
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: $gray-light;
+					z-index: -5;
+				}
+				.milestones-descr{
+					&:after{
+						color: $blue-simple-03;
+					}
+				}
+			}
+			@include breakpoint(mobile){
+				padding: 28px 0 18px;
+			}
+		}
+		.heading{
+			text-align: left;
+		}
+		.milestones-descr{
+			position: relative;
+			&:after{
+				counter-increment: list;
+				content: counter(list);
+				position: absolute;
+				top: -38px;
+				left: 0;
+				font-family: $MuseoCyrl;
+				font-weight: 500;
+				font-size: 250px;
+				line-height: 1;
+				color: $gray-light-01;
+				z-index: -1;
+				@include breakpoint(mobile){
+					font-size: 200px;
+					top: -30px;
+				}
+			}
+			p{
+				margin-bottom: 25px;
+				line-height: 1.6;
+				@include breakpoint(mobile){
+					margin-bottom: 15px;
+					line-height: 1.5;
+				}
+			}
+		}
+	}
+	.slide-milestones{
+		padding: 10px;
+		background: $white;
+		margin: 0 50px 28px 44px;
+		box-shadow: 0 0 5px 1px rgba(0,0,0,.3);
+		@include breakpoint(mobile){
+			margin: 0 20px 28px;
+			padding: 4px;
+		}
+		.slide-item{
+			img{
+				display: block;
+				width: 100%;
+			}
+		}
+		.slick-prev,
+		.slick-next{
+			top: 50%;
+			width: 23px;
+			height: 45px;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+			margin: 0;
+			@include breakpoint(mobile){
+				width: 22px;
+				height: 46px;
+			}
+		}
+		.slick-prev {
+			background: url(#{$images}ico-arrow-prev.svg) no-repeat 50% 50%;
+			-webkit-background-size: 23px auto;
+			background-size: 23px auto;
+			left: -42px;
+			@include breakpoint(mobile){
+				left: -25px;
+				-webkit-background-size: 15px auto;
+				background-size: 15px auto;
+			}
+		}
+		.slick-next {
+			background: url(#{$images}ico-arrow-next.svg) no-repeat 50% 50%;
+			-webkit-background-size: 23px auto;
+			background-size: 23px auto;
+			right: -42px;
+			@include breakpoint(mobile){
+				right: -25px;
+				-webkit-background-size: 15px auto;
+				background-size: 15px auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,109 @@
+// vars
+$fonts: '../fonts/';
+$images: '../images/';
+
+// fonts
+$MuseoCyrl: 'MuseoCyrl', sans-serif;
+
+
+$grid-gutter-width: 20px;
+$grid-gutter-width-mobile: 10px;
+$container-large-desktop: (1280px + $grid-gutter-width);
+$screen-lg: 1302px;
+$desktop-md: $screen-lg;
+$tablet: 991px;
+$mobile: 767px;
+
+// font settings
+
+$font-family-base: $MuseoCyrl;
+$font-size-base: 15px;
+$line-height-base: 1.25;
+$font-size-h1: 54px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+
+$paragraph-spacing: 0 0 15px;
+
+$hover-opacity: 0.8;
+$time-animation: 0.3s;
+
+
+// colors
+$white: #fff;
+$black: #000;
+$gray-simple: #f6eee0;
+$gray-light: #eee5d6;
+$gray-light-01: #e8ddcb;
+$dark-light-02: #b5a191;
+$dark-brown: #18120d;
+$dark-brown-01: #211710;
+$dark-brown-02: #34271b;
+$dark-brown-03: #4a3b2d;
+$grey-gold: #ab9886;
+$gold-light: #e4c66e;
+$gold-light-01: #e1d6c2;
+$gold-light-02: #e0d5c2;
+$gold: #d6b964;
+$gold-02: #c5a853;
+$dark-gold: #d2b04c;
+$blue-simple: #bdc6cf;
+$blue-simple-01: #d5dade;
+$blue-simple-02: #9aa4af;
+$gray-simple-01: #dddcdb;
+$dark-brown-04: #40330d;
+$blue-simple-03: #dfd1ba;
+$grey-gold-02: #a8914c;
+
+
+/* MY */
+$gray-light-03: #eae7e0;
+$gray-light-04: #eef1f4;
+$gray-light-05: #e4ded4;
+$grey: #706e6d;
+$grey-01: #646464;
+
+$base-color: $dark-brown;
+$body-bg: $gray-simple;
+
+// breadcrumb
+$breadcrumb-bg: $gray-simple;
+$breadcrumb-color: #6a6764;
+$breadcrumb-active-color: $dark-brown;
+$breadcrumb-separator: "/";
+
+// pagination
+$pagination-color: $dark-brown;
+$pagination-bg: $white;
+$pagination-border: $gray-simple-01;
+
+$pagination-hover-color: $dark-brown;
+$pagination-hover-bg: $gold;
+$pagination-hover-border: $gold;
+
+$pagination-active-color: $dark-brown;
+$pagination-active-bg: $gold;
+$pagination-active-border: $gold;
+
+$pagination-disabled-color: $gold-light-01;
+$pagination-disabled-bg: $white;
+$pagination-disabled-border: $gray-simple-01;
+
+
+$link-color: $gold-light;
+
+$btn-color: $dark-brown;
+$btn-border-radius-base: 25px;
+$btn-font-size: 15px;
+$btn-line-height: 20px;
+$btn-font-weight: 400;
+$btn-min-width: 250px;
+
+$btn-default-bg: $gold;
+$btn-default-border: $gold;
+
+
+
+$bootstrap-sass-asset-helper: false;
+$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/");

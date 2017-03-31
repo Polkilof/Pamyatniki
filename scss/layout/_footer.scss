@@ -1,0 +1,136 @@
+/* footer */
+#footer {
+	background: url(#{$images}img-bg-infographic.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	padding: 20px 0 30px;
+	color: $blue-simple-02;
+	font-family: $MuseoCyrl;
+	font-weight: 100;
+	font-size: 13px;
+	@include breakpoint(mobile){
+		padding: 15px 0 25px;
+	}
+	@include clearfix();
+	.navbar-brand{
+		background: url(#{$images}logo.svg) no-repeat 11px 13px;
+		-webkit-background-size: 28px auto;
+		background-size: 28px auto;
+		font-size: 26px;
+		line-height: 26px;
+		color: $white;
+		text-transform: uppercase;
+		font-family: $MuseoCyrl;
+		font-weight: 700;
+		height: auto;
+		padding: 0;
+		margin: 9px 0 0;
+		a{
+			color: inherit;
+			display: block;
+			padding: 0 0 0 64px;
+		}
+		b{
+			font-family: $MuseoCyrl;
+			font-weight: 700;
+		}
+		span{
+			color: #e4c66e;
+			display: block;
+			font-size: 20px;
+			line-height: 24px;
+			font-family: $MuseoCyrl;
+			font-weight: 300;
+			padding: 2px 0 0;
+			font-weight: normal;
+		}
+	}
+	.row{
+		margin-bottom: 26px;
+		@include breakpoint(mobile){
+			margin-bottom: 16px;
+		}
+	}
+	ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		@include clearfix();
+		li{
+			overflow: hidden;
+			padding: 0 10px;
+			font-family: $MuseoCyrl;
+			font-weight: 100;
+			font-size: 14px;
+			line-height: 18px;
+			@include breakpoint(mobile){
+				padding: 5px 0;
+			}
+		}
+		address{
+			overflow: hidden;
+			display: block;
+			margin: 0;
+		}
+		.cell{
+			display: table-cell;
+			vertical-align: middle;
+			width: 1%;
+			height: 85px;
+			@include breakpoint(mobile){
+				height: 40px;
+			}
+		}
+		.holder{overflow: hidden;}
+		.ico{
+			float: left;
+			width: 35px;
+			height: 85px;
+			border-radius: 50%;
+			background: transparent;
+			position: relative;
+			margin: 0 14px 0 0;
+			@include breakpoint(mobile){
+				height: 40px;
+				margin: 0 18px 0 0;
+			}
+			img{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		a{
+			display: block;
+			color: $grey-gold-02;
+		}
+		.tel{
+			font-family: $MuseoCyrl;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 22px;
+			span{
+				color: $blue-simple-02;
+			}
+		}
+		.mail{
+			display: inline-block;
+			vertical-align: top;
+			span{
+				color: $blue-simple-02;
+			}
+		}
+	}
+
+
+
+	p{
+		text-align: center;
+		margin: 0;
+	}
+}
